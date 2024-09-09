@@ -25,33 +25,7 @@ def ai_number_guessing_game():
 
     print("Something went wrong!")
 
-def dfs(low, high):
-    attempts = 0
-    guess = 0
 
-    if guess == 0:
-        guess = random.randint(low, high)
-        print("Think of number between 1 and 100, and I (the AI) will try to guess it.")
-
-    print(f"AI's guess is: {guess}")
-
-    attempts += 1
-    feedback = input("Enter 'h' if too high, 'l' if too low, or 'c' if correct: ").lower()
-
-    if feedback == 'c':
-        print(f"I (AI) guessed the number in {attempts} attempts!")
-        return
-    elif feedback == 'h':
-        dfs(low, guess-1)
-    elif feedback == 'l':
-        dfs(guess+1, high)
-
-def dfs1():
-    low = 1
-    high = 100
-    attempts = 0
-    dfs(low, high)
-
+# Start the game
 # Run the AI version
-# ai_number_guessing_game()
-dfs1()
+ai_number_guessing_game()
