@@ -18,11 +18,11 @@ def dfs(low, high, attempts):
     elif feedback == 'l':
         dfs(guess+1, high, attempts)
 
-def dfs1():
+def dfs_game():
     low = 1
     high = 100
     attempts = 0
     dfs(low, high, attempts)
 
 
-dfs1()
+dfs_game()
