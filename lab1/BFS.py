@@ -34,9 +34,6 @@ def bfs_game(low, high):
             if guess + 1 <= current_high:  # Ensure the range is valid
                 queue.append((guess + 1, current_high))
 
-    # Output the final state of the queue (for debugging or informational purposes)
-    print(queue)
-
 
 # Start the guessing game with the range from 1 to 100
 bfs_game(1, 100)
