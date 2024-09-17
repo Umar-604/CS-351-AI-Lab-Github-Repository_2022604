@@ -1,4 +1,5 @@
-Lab 1 Task
+**Lab 1 Task**
+
 Task Description
 
 Lab 1 Task: Implement a number guessing game where the AI uses different search algorithms to guess a number chosen by the player. The task involves utilizing various search techniques to determine the most efficient way to guess the number.
