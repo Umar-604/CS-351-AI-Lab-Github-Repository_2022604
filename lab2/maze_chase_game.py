@@ -135,7 +135,7 @@ def move_player(grid, player_position, moves):
 
 
 # Main function to play the game
-def space_shooter():
+def maze_chase():
     size = int(input("Enter the grid size (e.g., 6 for a 6x6 grid): "))
     num_enemies = int(input(f"Enter the number of enemies (e.g., 3): "))
 
@@ -164,4 +164,4 @@ def space_shooter():
 
 
 if __name__ == "__main__":
-    space_shooter()
+    maze_chase()
