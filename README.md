@@ -215,6 +215,5 @@ After solving, the program visualizes the word relationship graph, where:
 - **Grid Size**: You can modify the `rows` and `cols` variables to change the size of the grid.
 - **Number of Blocked Cells**: The `num_blocks` variable controls the number of blocked cells in the grid.
 - **Word List**: The user can provide a different set of words in each run.
-- 
-
+  
 ---
