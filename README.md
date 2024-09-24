@@ -201,19 +201,5 @@ After solving, the program visualizes the word relationship graph, where:
 
 4. **View the Graph**:
     - After all words have been placed, a visual representation of the word relationships is displayed as a graph.
-
-## Example Game Flow
-
-1. A random 5x5 grid is generated with 10 blocked cells.
-2. The user inputs a list of words.
-3. The program places the words into available slots using the constraint propagation algorithm.
-4. The current state of the crossword grid is printed after each successful word placement.
-5. A graph of the word relationships is displayed.
-
-## Customization
-
-- **Grid Size**: You can modify the `rows` and `cols` variables to change the size of the grid.
-- **Number of Blocked Cells**: The `num_blocks` variable controls the number of blocked cells in the grid.
-- **Word List**: The user can provide a different set of words in each run.
   
 ---
