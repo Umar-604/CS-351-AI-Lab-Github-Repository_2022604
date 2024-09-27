@@ -108,3 +108,98 @@ Maze chase is a grid-based strategy game where the player controls a character o
 **Movement:** Use the W, A, S, D keys to move the player up, left, down, or right respectively.
 
 **Objective:** Reach any position on the top row to win the game. Avoid collisions with enemies.
+
+---
+
+# Lab 3 Task
+
+---
+
+# Crossword Puzzle Solver
+
+**Crossword Puzzle Solver** is a Python program that allows you to create and solve crossword puzzles. The program generates a grid with random blocked cells, takes a list of words from the user, and attempts to place them into the grid using a constraint propagation selection algorithm. It also visualizes word relationships using a graph.
+
+## Task Description
+
+Implement a crossword puzzle solver that:
+- Accepts a random grid with blocked cells.
+- Takes a list of words as input from the user.
+- Places the words into horizontal and vertical slots in the grid, using constraint propagation for efficient word placement.
+- Visualizes the relationships between words placed in the grid using a network graph.
+
+## Game Features
+
+- **Random Grid Generation**: A grid is randomly generated with a specified number of blocked cells.
+- **Word Input**: The user provides a list of words to be placed in the crossword grid.
+- **Slot Extraction**: The program automatically identifies valid horizontal and vertical word slots in the grid.
+- **Constraint Propagation Selection Algorithm**: Words are placed efficiently in available slots, and intersections are maintained using a constraint propagation method.
+- **Graph Visualization**: A graph visualization of the word relationships is created, showing intersections between words.
+
+## Features Breakdown
+
+### 1. Grid-Based Word Placement
+
+- The grid is initialized with random blocks (`#`) and empty spaces (`-`) where words can be placed.
+- Words are placed in available horizontal or vertical slots, respecting the grid constraints.
+
+### 2. Word Slot Extraction
+
+- The program automatically extracts available horizontal and vertical slots from the grid based on sequences of empty cells.
+- Each slot is characterized by its direction (horizontal or vertical), starting position, and length.
+
+### 3. Constraint Propagation Selection Algorithm
+
+- **Constraint Propagation** is used to place words efficiently in the crossword.
+- The algorithm checks available slots and words, applying constraints based on slot size and intersections with other words.
+- Words are only placed in slots if they meet the length and intersection constraints. If no valid slot is found for a word, the program reports that no solution was found for that word.
+  
+This approach reduces the search space and improves the efficiency of word placement by minimizing conflicts and ensuring word intersections adhere to the crossword puzzle rules.
+
+### 4. Graph Visualization
+
+- A graph is created using the `networkx` library to visualize the relationships between words.
+- Words that intersect in the grid are connected by edges in the graph.
+- The graph is displayed using `matplotlib`.
+
+## How It Works
+
+### 1. Random Grid Generation
+
+The program generates a grid of a specified size (e.g., 5x5) with random blocked cells (`#`). The number of blocked cells can be customized.
+
+### 2. Word Input
+
+The user is prompted to enter words, one per line. The input continues until the user provides an empty line, indicating the end of input.
+
+### 3. Solving the Crossword Using Constraint Propagation
+
+The program:
+- Extracts word slots from the grid.
+- Attempts to place each word into the grid using the constraint propagation selection algorithm.
+- The algorithm ensures that words meet the size and intersection constraints for each slot.
+- Updates the grid as words are placed.
+- Displays the grid after each successful placement.
+
+### 4. Visualization
+
+After solving, the program visualizes the word relationship graph, where:
+- Nodes represent words.
+- Edges represent intersections between words.
+
+## Usage
+
+1. **Run the Program**:
+    - The program starts by generating a random grid with blocked cells and displaying it.
+  
+2. **Input Words**:
+    - Enter words you want to place in the crossword, one per line.
+    - Press Enter on an empty line to finish input.
+
+3. **View the Crossword**:
+    - The program attempts to place the words in the grid using the constraint propagation algorithm.
+    - After each successful word placement, the current state of the grid is displayed.
+
+4. **View the Graph**:
+    - After all words have been placed, a visual representation of the word relationships is displayed as a graph.
+  
+---
