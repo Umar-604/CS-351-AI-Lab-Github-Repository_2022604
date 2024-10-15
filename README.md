@@ -203,3 +203,88 @@ After solving, the program visualizes the word relationship graph, where:
     - After all words have been placed, a visual representation of the word relationships is displayed as a graph.
   
 ---
+
+# Lab 4 Task
+
+## Titanic Dataset Analysis
+
+**Titanic Dataset Analysis** is a Python program that explores the famous Titanic dataset to predict passenger survival based on various features. The program implements data preprocessing, visualization, and machine learning models (k-Nearest Neighbors and Decision Trees) to achieve this goal.
+
+## Task Description
+
+Implement an analysis workflow that:
+
+1. Downloads the Titanic dataset from Kaggle.
+2. Preprocesses the data by handling missing values and encoding categorical variables.
+3. Visualizes the data distributions and relationships.
+4. Trains and evaluates k-NN and Decision Tree classifiers.
+5. Visualizes decision boundaries and compares model performance.
+
+## Game Features
+
+- **Data Exploration**: Visualizes the distribution of key features such as passenger class, age, and gender.
+- **Missing Value Handling**: Automatically fills missing values and drops unnecessary columns.
+- **Feature Encoding**: Converts categorical variables into numerical format for model training.
+- **Machine Learning Models**: Implements k-NN and Decision Trees for predicting survival.
+- **Model Evaluation**: Computes performance metrics like accuracy, precision, recall, and F1-score.
+- **Visualization**: Displays decision boundaries and performance comparison charts.
+
+## Features Breakdown
+
+1. **Data Loading and Visualization**
+   - Loads the Titanic dataset and visualizes distributions of features such as `Pclass`, `Age`, and `Sex`.
+
+2. **Data Preprocessing**
+   - Handles missing values by filling in `Age` with the median and dropping the `Cabin` column.
+   - Encodes categorical features like `Sex` and `Embarked` into numerical values.
+
+3. **Feature Standardization**
+   - Standardizes numerical features (`Age` and `Fare`) to improve model performance.
+
+4. **Machine Learning Implementation**
+   - Splits the dataset into training and testing sets.
+   - Trains a k-Nearest Neighbors (k-NN) classifier and a Decision Tree classifier.
+   - Evaluates both models using performance metrics.
+
+5. **Decision Boundary Visualization**
+   - Visualizes decision boundaries for both models using scatter plots.
+   - Displays the decision-making process of the models based on `Age` and `Fare`.
+
+6. **Performance Comparison**
+   - Compares the performance of both models using bar charts to visualize accuracy, precision, recall, and F1-score.
+
+## How It Works
+
+1. **Dataset Download**
+   - The program uses the Kaggle API to download the Titanic dataset.
+
+2. **Data Preprocessing**
+   - It processes the dataset to handle missing values and convert categorical features into a suitable format for modeling.
+
+3. **Model Training and Evaluation**
+   - The program splits the data, trains k-NN and Decision Tree models, and evaluates their performance on the test set.
+
+4. **Visualization**
+   - After evaluation, it visualizes the decision boundaries and performance metrics, providing insights into the models' behavior.
+
+## Usage
+
+1. **Run the Program**:
+   - Execute the notebook in Google Colab after uploading the `kaggle.json` file for authentication.
+
+2. **Data Exploration**:
+   - The program automatically displays visualizations of data distributions and missing values.
+
+3. **Model Training**:
+   - The models are trained and evaluated automatically, with results printed in the output.
+
+4. **Visualizations**:
+   - After model evaluation, various visualizations of decision boundaries and performance metrics are displayed for analysis.
+
+## Requirements
+
+- Python 3.x
+- Libraries: Pandas, NumPy, Seaborn, Matplotlib, scikit-learn
+
+---
+
